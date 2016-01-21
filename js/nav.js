@@ -1,9 +1,9 @@
 var menuList = [
-	{name: "Intro", link: "intro.html", cssClass: "b"},
-	{name: "Lesson 1", link: "les1.html", cssClass: "b"},
-	{name: "Lesson 2", link: "les2.html", cssClass: "b"},
-	{name: "Lesson 3", link: "les3.html", cssClass: "b"},
-	{name: "Lesson 4", link: "les4.html", cssClass: "b"}
+	{name: "Intro", link: "intro.html", cssClass: ""},
+	{name: "Lesson 1", link: "les1.html", cssClass: ""},
+	{name: "Lesson 2", link: "les2.html", cssClass: ""},
+	{name: "Lesson 3", link: "les3.html", cssClass: ""},
+	{name: "Lesson 4", link: "les4.html", cssClass: ""}
 ];
 
 var MenuItem = function(data) {
@@ -18,6 +18,8 @@ var ViewModel = function() {
 	//Creates an empty array to hold menu objects
 	this.menu = ko.observableArray([]);
 	
+	//Thanks to Blair Wadman for this code
+	// http://befused.com/javascript/get-filename-url
 	var url = window.location.pathname;
 	var filename = url.substring(url.lastIndexOf('/')+1);
 	
