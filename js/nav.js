@@ -33,6 +33,12 @@ var ViewModel = function() {
 		}
 		self.menu.push( new MenuItem(pageTab) );
 	});
+	document.getElementById('header').innerHTML =
+		'<div id="logo"><h1>Logo</h1></div>' +
+		'<button type="button" class="hamburger-button">' +	
+			'<span class="horiz-bar"></span>' +
+			'<span class="horiz-bar"></span>' +
+			'<span class="horiz-bar"></span></button>';
 	
 	document.getElementById('nav-links').innerHTML =
 		'<ul data-bind="foreach: menu">' +
