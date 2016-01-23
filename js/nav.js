@@ -33,6 +33,7 @@ var ViewModel = function() {
 		}
 		self.menu.push( new MenuItem(pageTab) );
 	});
+	//Adds logo and hamburger button to top (button is invisible about 768px)
 	document.getElementById('header').innerHTML =
 		'<div id="logo"><h1>Logo</h1></div>' +
 		'<button type="button" class="hamburger-button">' +	
@@ -40,6 +41,7 @@ var ViewModel = function() {
 			'<span class="horiz-bar"></span>' +
 			'<span class="horiz-bar"></span></button>';
 	
+	//Makes the menu
 	document.getElementById('nav-links').innerHTML =
 		'<ul data-bind="foreach: menu">' +
 		'<a data-bind="attr: {href: link}">' +
@@ -49,9 +51,6 @@ var ViewModel = function() {
 		'<ul data-bind="foreach: menu">' +
 		'<a data-bind="attr: {href: link}">' +
 		'<li data-bind="text: name, attr: {class: cssClass}"></li></a></ul>';
-		
-	
-	var x = document.getElementsByTagName('a');
 };
 
 ko.applyBindings(new ViewModel())
