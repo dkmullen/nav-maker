@@ -42,7 +42,7 @@ var ViewModel = function() {
 			'<span class="horiz-bar"></span></button>';
 	
 	//Makes the menu
-	document.getElementById('nav-links').innerHTML =
+	document.getElementById('nav-bar').innerHTML =
 		'<ul data-bind="foreach: menu">' +
 		'<a data-bind="attr: {href: link}">' +
 		'<li data-bind="text: name, attr: {class: cssClass}"></li></a></ul>';
@@ -51,6 +51,23 @@ var ViewModel = function() {
 		'<ul data-bind="foreach: menu">' +
 		'<a data-bind="attr: {href: link}">' +
 		'<li data-bind="text: name, attr: {class: cssClass}"></li></a></ul>';
+		
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("nav").toggle();
+    });
+});
+		
+	/**	this.toggle=function() {
+			var e = document.getElementById('nav-bar');
+			if (e.style.display == 'block') {
+				e.style.display = 'none';
+				} else {
+					e.style.display = 'block';
+				}
+			console.log('toggle!');
+		};*/
 };
 
 ko.applyBindings(new ViewModel())
+//data-bind="click: toggle"
