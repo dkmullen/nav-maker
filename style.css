@@ -49,7 +49,7 @@ table {
 /* -------------End of style reset ------------------ */
 
 body {
-	color: #404040;
+	color: rgb(64, 64, 64);
 	max-width: 800px;
 	font-family: sans-serif;
 	margin: 0 auto;
@@ -65,11 +65,18 @@ header {
 	display: inline-block;
 }
 #container {
-	background-color: #ECEEE5;
-	padding-bottom: 10px;
+	background-color: #d9d9d9;
+	padding: 10px 20px;
+	line-height: 1.15;
+}
+#container h1 {
+	font-size: 175%;
+}
+#container p {
+	margin-bottom: 15px;
 }
 nav {
-	background-color: #404040;
+	background-color: rgb(64, 64, 64);
 	color: #F2F2F2;	
 	padding: 0;	
 	list-style: none;
@@ -113,10 +120,11 @@ footer a {
 	text-decoration: none;
 	color: #404040;
 }
+/* Makes sure the nav bar gets turned back on */
 @media (min-width: 769px) {
 	#nav-bar {
-		display: block;
-	}
+		display: block !important;
+	} 
 }
 @media (max-width:768px) {
 	.hamburger-button {
@@ -136,6 +144,7 @@ footer a {
 	  border-radius: 1px;
 	  background-color: #d9d9d9;
 	}
+	/* Keeps the top bar from having a margin */
 	.horiz-bar + .horiz-bar {
 		margin-top: 3px;
 	}
@@ -152,3 +161,4 @@ footer a {
 		display: block;
 	}
 }
+/*Coffee graphic by <a href="http://www.freepik.com/">Freepik</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a>*?

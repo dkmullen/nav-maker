@@ -35,8 +35,8 @@ var ViewModel = function() {
 	});
 	//Adds logo and hamburger button to top (button is invisible about 768px)
 	document.getElementById('header').innerHTML =
-		'<div id="logo"><h1>Logo</h1></div>' +
-		'<button type="button" class="hamburger-button">' +	
+		'<img id="logo" src="pix/my_logo_200.png">' +
+		'<button type="button" class="hamburger-button" data-bind="click: toggle">' +	
 			'<span class="horiz-bar"></span>' +
 			'<span class="horiz-bar"></span>' +
 			'<span class="horiz-bar"></span></button>';
@@ -52,22 +52,21 @@ var ViewModel = function() {
 		'<a data-bind="attr: {href: link}">' +
 		'<li data-bind="text: name, attr: {class: cssClass}"></li></a></ul>';
 		
-	$(document).ready(function(){
-		$("button").click(function(){
-			$("nav").toggle();
-    });
-});
-		
-	/**	this.toggle=function() {
-			var e = document.getElementById('nav-bar');
-			if (e.style.display == 'block') {
-				e.style.display = 'none';
-				} else {
-					e.style.display = 'block';
-				}
-			console.log('toggle!');
-		};*/
+	this.toggle=function() {
+		var e = document.getElementById('nav-bar');
+		if (e.style.display == 'block') {
+			e.style.display = 'none';
+			} else {
+				e.style.display = 'block';
+			}
+		console.log('toggle!');
+	};
 };
 
 ko.applyBindings(new ViewModel())
-//data-bind="click: toggle"
+
+/**
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("nav").toggle();
+    }); */
