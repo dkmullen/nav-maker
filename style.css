@@ -56,7 +56,7 @@ body {
 }
 header {
 	height: 50px;
-	padding: 10px;
+	padding: 20px 10px;
 }
 .hamburger-button {
 	display: none;
@@ -129,8 +129,8 @@ footer a {
 @media (max-width:768px) {
 	.hamburger-button {
 	  position: fixed;		
-	  right: 3px;
-	  top: 3px;
+	  right: 10px;
+	  top: 35px;
 	  z-index: 2;
 	  display: block;
 	  padding: 7px 7px;
@@ -139,14 +139,14 @@ footer a {
 	}
 	.hamburger-button .horiz-bar {
 	  display: block;
-	  width: 20px;
-	  height: 2px;
+	  width: 30px;
+	  height: 3px;
 	  border-radius: 1px;
 	  background-color: #d9d9d9;
 	}
 	/* Keeps the top bar from having a margin */
 	.horiz-bar + .horiz-bar {
-		margin-top: 3px;
+		margin-top: 6px;
 	}
 	nav {
 		width: 300px;
