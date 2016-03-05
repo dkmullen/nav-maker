@@ -1,5 +1,5 @@
 var menuList = [
-	{name: "Intro", link: "intro.html", cssClass: ""},
+	{name: "Intro", link: "index.html", cssClass: ""},
 	{name: "Lesson 1", link: "les1.html", cssClass: ""},
 	{name: "Lesson 2", link: "les2.html", cssClass: ""},
 	{name: "Lesson 3", link: "les3.html", cssClass: ""},
@@ -35,7 +35,7 @@ var ViewModel = function() {
 	});
 	//Adds logo and hamburger button to top (button is invisible about 768px)
 	document.getElementById('header').innerHTML =
-		'<a href="intro.html"><img id="logo" src="pix/my_logo_200.png"></a>' +
+		'<a href="index.html"><img id="logo" src="pix/my_logo_200.png"></a>' +
 		'<button type="button" class="hamburger-button" data-bind="click: toggle">' +	
 			'<span class="horiz-bar"></span>' +
 			'<span class="horiz-bar"></span>' +
