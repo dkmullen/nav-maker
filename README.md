@@ -6,3 +6,5 @@ The app runs from `intro.html` accesses `js/nav.js` and makes use of Knockout (`
 
 ## Install the project
 Clone this repository. Run the project by opening the `.html` file. Find the `.js` file in the `js` directory. 
+
+TODO: Clean up app.js - remove console logs, commented-out js, etc.
